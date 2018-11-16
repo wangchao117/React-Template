@@ -10,6 +10,9 @@ import {
 } from './style'
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <HeaderWrapper style={{marginBottom:'20px'}}>

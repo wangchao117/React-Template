@@ -6,7 +6,7 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
 	if (action.type === HEADER_STATE) {
-		console.log('childpage-reducer')
+		console.log('header-reducer')
 		const newState = JSON.parse(JSON.stringify(state));
 		newState.header_state = action.data;
 		return newState;
