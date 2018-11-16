@@ -1,7 +1,7 @@
 import { HOME_STATE } from './actionTypes';
 // state默认值
 const defaultState = {
-	home_state: ''
+	home_state: '111111'
 }
 
 export default (state = defaultState, action) => {

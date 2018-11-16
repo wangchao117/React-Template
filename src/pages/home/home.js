@@ -15,19 +15,20 @@ class Home extends Component {
   render() {
     return (
       <HomeWrapper onClick={this._handleClick}>
-        Home
+        Home {this.props._state}
       </HomeWrapper>
     );
   }
 
   _handleClick() {
+    console.log(this.props._state)
     this.props.changeHomeData();
   }
-  
+
 }
 
 const mapState = (state) => ({
-	// showScroll: state.getIn(['home', 'showScroll'])
+	state: state.getIn(['home', 'home_state'])
 })
 
 const mapDispatch = (dispatch) => ({
