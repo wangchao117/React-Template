@@ -28,8 +28,9 @@ class Home extends Component {
 }
 
 const mapState = (state) => {
+  // console.log(state.getIn('home'))
 	return {
-		home_state: state.home_state
+		home_state: state.get('home').home_state
 	}
 }
 
