@@ -14,7 +14,7 @@ class Childpage extends Component {
   }
   render() {
     return (
-      <ChildWrapper onClick={this._handleClick} className="Childpage">
+      <ChildWrapper onClick={this._handleClick}>
         Childpage
       </ChildWrapper>
     );
@@ -25,7 +25,8 @@ class Childpage extends Component {
 }
 
 const mapState = (state) => ({
-	// 获取state
+  // 获取state
+  
 })
 
 const mapDispatch = (dispatch) => ({

@@ -15,26 +15,29 @@ class Home extends Component {
   render() {
     return (
       <HomeWrapper onClick={this._handleClick}>
-        Home {this.props._state}
+        Home {this.props.home_state}
       </HomeWrapper>
     );
   }
 
   _handleClick() {
-    console.log(this.props._state)
+    console.log(this.props);
     this.props.changeHomeData();
   }
 
 }
 
-const mapState = (state) => ({
-	state: state.getIn(['home', 'home_state'])
-})
+const mapState = (state) => {
+	return {
+		home_state: state.home_state
+	}
+}
+
 
 const mapDispatch = (dispatch) => ({
-	changeHomeData() {
-		dispatch(actionCreators.asyncGet());
-	}
+  changeHomeData() {
+    dispatch(actionCreators.asyncGet());
+  }
 });
 
 export default connect(mapState, mapDispatch)(Home);
