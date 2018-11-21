@@ -18,14 +18,18 @@ class Header extends Component {
       <HeaderWrapper style={{marginBottom:'20px'}}>
         <Link style={{marginRight: '20px'}} to='/home'>To Home</Link>
         <Link to='/child'>To Child</Link>
+        <span style={{paddingLeft: '20px'}}>{this.props.header_state}</span>
       </HeaderWrapper>
     );
   }
 }
 
-const mapState = (state) => ({
-	// 获取state
-})
+const mapState = (state) => {
+  // 获取state
+  return {
+		header_state: state.getIn(['header', 'header_state'])
+	}
+}
 
 const mapDispatch = (dispatch) => ({
   // 派发state
