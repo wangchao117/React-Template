@@ -1,11 +1,12 @@
 import { HOME_STATE } from './actionTypes';
+import { fromJS } from 'immutable';
 import axios from 'axios';
 
 // 异步获取数据
 export const changeHomeState = (data) => {
   return {
     type: HOME_STATE,
-    data
+    data: fromJS(data)
   }
 }
 
