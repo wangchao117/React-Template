@@ -1,4 +1,5 @@
 import { HOME_STATE } from './actionTypes';
+// 这里需要用immutable，原因是home的reducer初始化数据就是immutable对象
 import { fromJS } from 'immutable';
 import axios from 'axios';
 

@@ -15,7 +15,7 @@ class Childpage extends Component {
   render() {
     return (
       <ChildWrapper onClick={this._handleClick}>
-        Childpage
+        Childpage {this.props.childpage_state}
       </ChildWrapper>
     );
   }
@@ -24,10 +24,13 @@ class Childpage extends Component {
   }
 }
 
-const mapState = (state) => ({
+const mapState = (state) => {
+  console.log(state.getIn(['childpage', 'childpage_state']))
   // 获取state
-  
-})
+  return {
+    childpage_state: state.getIn(['childpage', 'childpage_state'])
+  }
+}
 
 const mapDispatch = (dispatch) => ({
   // 派发state
